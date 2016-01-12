@@ -83,6 +83,7 @@ public class MLBParkResource {
 
 		BasicDBObject boxQuery = new BasicDBObject();
 		boxQuery.put("$box", boxList);
+		
 
 		spatialQuery.put("coordinates", new BasicDBObject("$within", boxQuery));
 		System.out.println("Using spatial query: " + spatialQuery.toString());
